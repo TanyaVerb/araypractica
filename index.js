@@ -264,6 +264,14 @@ var isAnagram = function (test, original) {
   var o = original.toLowerCase().split("").sort().join("");
   return t == o ? true : false;
 };
+
+//Четвертый вариант
+// var isAnagram = function (test, original){
+//   const value1 = test.toLowerCase().split().sort().join('');
+//   const value2 = original.toLowerCase().split().sort().join('');
+//   return t == o ? true : false;
+// }
+
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //Задача
 /*
@@ -285,6 +293,22 @@ var isAnagram = function (test, original) {
 если изначально нет свечей, ковер не может загореться;
 поскольку это не реальность, то из торта может упасть больше свечей, чем всего...
 */
+
+function cake(num,str){
+  let stringArray = str.split('')
+  let res = 0;
+  for (let i in stringArray){
+ res +=i%2==0? stringArray[i].charCodeAt(0): stringArray[i].charCodeAt(0)-96;
+  }
+  
+  console.log(res)
+  const value1 = "Fire!"
+  const value2 = 'That was close'
+  returnres> num*0.7 ? value1: value2
+}
+
+cake(num,str)
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //Методы чисел
@@ -609,3 +633,13 @@ function multiplyAll(arr) {
 // Пример использования
 const result4 = multiplyAll([1, 2, 3])(2);
 console.log(result4); // [2, 4, 6]
+
+// _________________________________________________________
+const task = [ 'проснуться', 'поработать', 'погулять', 'поесть']
+
+function updateTask(tasks,startIndex, newTask,  deleteCount) {
+ tasks.splice(startIndex,deleteCount,newTask )
+  return task;
+}
+
+console.log('11111111', updateTask(task, 0, 'поспать'))
